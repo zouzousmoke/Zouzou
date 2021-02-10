@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<head>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120298756-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-120298756-1');
+		</script>
+		<title>NewTrust</title>
+		<meta name="viewport" content="width=device-width, minimum-scale=0.25, maximum-scale=1.0, initial-scale=1.0"/>
+        <link rel="icon" type="image/png" sizes="96x96" href="/ui/images/favicon.png">
+		<link href="/ui/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+		<script src="/ui/js/jquery.min.js"></script>
+		<link href="/ui/css/style.css" rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="/ui/css/chocolat.css" type="text/css" media="screen">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<script type="text/javascript" src="/ui/js/move-top.js"></script>
+		<script type="text/javascript" src="/ui/js/easing.js"></script>
+		<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+		<script type="text/javascript" src="/ui/js/mask.min.js"></script>
+
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1500);
+				});
+			});
+		</script>
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<script>
+			$(function() {
+				var pull 		= $('#pull');
+					menu 		= $('nav ul');
+					menuHeight	= menu.height();
+				$(pull).on('click', function(e) {
+					e.preventDefault();
+					menu.slideToggle();
+				});
+				$(window).resize(function(){
+	        		var w = $(window).width();
+	        		if(w > 320 && menu.is(':hidden')) {
+	        			menu.removeAttr('style');
+	        		}
+	    		});
+			});
+		</script>
+
+</head>
+<body>
+		<div id="top" class="{{@bg}}">
+			<div id="home" class="header">
+					<div class="top-header">
+						<div class="container">
+						<div class="logo">
+							<a href="/"><img src="/ui/images/newtrust_baseline.svg" title="Confians" /></a>
+						</div>
+						 <nav class="top-nav">
+							<ul class="top-nav">
+								<li><a href="/">Accueil</a></li>
+								<li class="#"><a href="/about">Qui sommes-nous?</a></li>
+								<li><a href="/faq">FAQ</a></li>
+								<li><a href="/inscription">Inscription</a></li>
+								<li><a href="/connexion">Connexion</a></li>
+								<li><a href="/contact">Contact</a></li>
+							</ul>
+							<a href="#" id="pull"><img src="/ui/images/nav-icon.png" title="menu" /></a>
+						</nav>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+			</div>
